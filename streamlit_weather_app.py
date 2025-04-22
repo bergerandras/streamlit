@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import requests
 
-st.cache_data()
+st.cache_data(ttl=1800)
 def get_current_weather_data(api_key, city_name):
 
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={api_key}&units=metric"
